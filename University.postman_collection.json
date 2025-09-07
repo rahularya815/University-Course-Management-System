@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "86e50f55-752b-4b4d-849a-b56b6a2cb60c",
+		"name": "University",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43780456",
+		"_collection_link": "https://rahulverma-1473092.postman.co/workspace/Rahul-Verma's-Workspace~0233cb5d-fe18-47f2-888b-389b677f3706/collection/43780456-86e50f55-752b-4b4d-849a-b56b6a2cb60c?action=share&source=collection_link&creator=43780456"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Stu1\",\r\n    \"email\":\"rahul@gmail.com\",\r\n    \"password\":\"rahul\",\r\n    \"roles\":[\"ROLE_Student\",\"ROLE_Teacher\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}register",
+					"host": [
+						"{{localhost}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJyYWh1bEBnbWFpbC5jb20iLCJpYXQiOjE3NTY2Mzk4NTUsInVzZXJuYW1lIjoicmFodWxAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9TdHVkZW50In0seyJhdXRob3JpdHkiOiJST0xFX1RlYWNoZXIifV0sImV4cCI6MTc1NjY3NTg1NX0.MjiyeeIxp_XCyJriQclnD5MnyvzhErlLILojNsjg2Q9xZQlw-v6YyCP_GFH1fIMW",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}hello",
+					"host": [
+						"{{localhost}}hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}delete?email=abhay@gmail.com",
+					"host": [
+						"{{localhost}}delete"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "abhay@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Stu1@gmail.com\",\r\n    \"password\":\"rahul\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}signin",
+					"host": [
+						"{{localhost}}signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}students/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mMUBnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY1NTksInVzZXJuYW1lIjoiUHJvZjFAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzAxNTl9.oAEUItfPiZQwMFHCxsWHRj1zyhNd1Z3y8iLn50eGRzjlP9LjKKRd9XdvHPLgOx6o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"rahul\",\r\n    \"email\":\"abhay@gmail.com\",\r\n    \"password\":\"rahul\",\r\n    \"roles\":[\"ROLE_Student\",\"ROLE_Teacher\"]\r\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}students/list",
+					"host": [
+						"{{localhost}}students"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}students/view/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mMUBnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY1NTksInVzZXJuYW1lIjoiUHJvZjFAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzAxNTl9.oAEUItfPiZQwMFHCxsWHRj1zyhNd1Z3y8iLn50eGRzjlP9LjKKRd9XdvHPLgOx6o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}students/view/4",
+					"host": [
+						"{{localhost}}students"
+					],
+					"path": [
+						"view",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}students/edit/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJyYWh1bEBnbWFpbC5jb20iLCJpYXQiOjE3NTcxNTc1OTcsInVzZXJuYW1lIjoicmFodWxAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9TdHVkZW50In0seyJhdXRob3JpdHkiOiJST0xFX1RlYWNoZXIifV0sImV4cCI6MTc1NzE5MzU5N30.2Nvi87X76_CDOS2jX5G-AqNhnMzG0pTcs4Rmdt56EgEk6l1rnVZ82MdfEUdzu9Bk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"abhay\",\r\n    \"email\":\"abhay@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}students/edit/5",
+					"host": [
+						"{{localhost}}students"
+					],
+					"path": [
+						"edit",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}professors/list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mMUBnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY1NTksInVzZXJuYW1lIjoiUHJvZjFAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzAxNTl9.oAEUItfPiZQwMFHCxsWHRj1zyhNd1Z3y8iLn50eGRzjlP9LjKKRd9XdvHPLgOx6o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}professors/list",
+					"host": [
+						"{{localhost}}professors"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}professors/view/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mMUBnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY1NTksInVzZXJuYW1lIjoiUHJvZjFAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzAxNTl9.oAEUItfPiZQwMFHCxsWHRj1zyhNd1Z3y8iLn50eGRzjlP9LjKKRd9XdvHPLgOx6o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}professors/view/1",
+					"host": [
+						"{{localhost}}professors"
+					],
+					"path": [
+						"view",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}professors/edit/6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJyYWh1bEBnbWFpbC5jb20iLCJpYXQiOjE3NTcxNTc1OTcsInVzZXJuYW1lIjoicmFodWxAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9TdHVkZW50In0seyJhdXRob3JpdHkiOiJST0xFX1RlYWNoZXIifV0sImV4cCI6MTc1NzE5MzU5N30.2Nvi87X76_CDOS2jX5G-AqNhnMzG0pTcs4Rmdt56EgEk6l1rnVZ82MdfEUdzu9Bk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Test Account\",\r\n    \"email\":\"Test@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}professors/edit/6",
+					"host": [
+						"{{localhost}}professors"
+					],
+					"path": [
+						"edit",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}courses/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mM0BnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY5MTcsInVzZXJuYW1lIjoiUHJvZjNAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzA1MTd9.t2VNPyq0raOGBUI9hiKLdhv_YavJm21NY5quqsYbINmEpZOW9opbErxSxNafqihM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Botany\",\r\n  \"code\": \"BOT1\",\r\n  \"description\": \"Introduction to Mathematics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}courses/register",
+					"host": [
+						"{{localhost}}courses"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}courses/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mMkBnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY4NTMsInVzZXJuYW1lIjoiUHJvZjJAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzA0NTN9.l6UWFfHDlxWemzXwZSZa5SnDV_iEG3-ZCzJVPMqznyW_phVSywT7LT7e3DuaDWc6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mathematics\",\r\n  \"code\": \"MATH10\",\r\n  \"description\": \"Introduction to Mathematics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}courses/list",
+					"host": [
+						"{{localhost}}courses"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}courses/view/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJQcm9mM0BnbWFpbC5jb20iLCJpYXQiOjE3NTcyMjY5MTcsInVzZXJuYW1lIjoiUHJvZjNAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9UZWFjaGVyIn1dLCJleHAiOjE3NTcyMzA1MTd9.t2VNPyq0raOGBUI9hiKLdhv_YavJm21NY5quqsYbINmEpZOW9opbErxSxNafqihM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}courses/view/3",
+					"host": [
+						"{{localhost}}courses"
+					],
+					"path": [
+						"view",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}courses/delete/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJyYWh1bEBnbWFpbC5jb20iLCJpYXQiOjE3NTcxNzEwNjgsInVzZXJuYW1lIjoicmFodWxAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9TdHVkZW50In0seyJhdXRob3JpdHkiOiJST0xFX1RlYWNoZXIifV0sImV4cCI6MTc1NzE3NDY2OH0.CI1kz0xWj-caNndeGGoUbXSRlHywvoa_wVsJ8AUdCZr1dgaxZloMPM-LWoKV3Z4I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}courses/delete/2",
+					"host": [
+						"{{localhost}}courses"
+					],
+					"path": [
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}enrollments/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJTdHUxQGdtYWlsLmNvbSIsImlhdCI6MTc1NzIyNzEzOCwidXNlcm5hbWUiOiJTdHUxQGdtYWlsLmNvbSIsInJvbGUiOlt7ImF1dGhvcml0eSI6IlJPTEVfU3R1ZGVudCJ9XSwiZXhwIjoxNzU3MjMwNzM4fQ.g_IWENf9YQ1KM6Gs6IurfgCKk5t5RciszXdeYSwMeJB7zPWq-O1dNHgb-3nbAWVD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mathematics\",\r\n  \"code\": \"MATH10\",\r\n  \"description\": \"Introduction to Mathematics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}enrollments/list",
+					"host": [
+						"{{localhost}}enrollments"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}enrollments/register/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJTdHUzQGdtYWlsLmNvbSIsImlhdCI6MTc1NzIyNzIzNywidXNlcm5hbWUiOiJTdHUzQGdtYWlsLmNvbSIsInJvbGUiOlt7ImF1dGhvcml0eSI6IlJPTEVfU3R1ZGVudCJ9XSwiZXhwIjoxNzU3MjMwODM3fQ.57oNm2Z6sK5yCye1enHS4xz3w2HlYveEZn_uPbkPxos7badIg1Dq_9wl_7XrGmUZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mathematics\",\r\n  \"code\": \"MATH10\",\r\n  \"description\": \"Introduction to Mathematics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}enrollments/register/4",
+					"host": [
+						"{{localhost}}enrollments"
+					],
+					"path": [
+						"register",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}enrollments/list/student/3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJTdHUzQGdtYWlsLmNvbSIsImlhdCI6MTc1NzIyNzIzNywidXNlcm5hbWUiOiJTdHUzQGdtYWlsLmNvbSIsInJvbGUiOlt7ImF1dGhvcml0eSI6IlJPTEVfU3R1ZGVudCJ9XSwiZXhwIjoxNzU3MjMwODM3fQ.57oNm2Z6sK5yCye1enHS4xz3w2HlYveEZn_uPbkPxos7badIg1Dq_9wl_7XrGmUZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mathematics\",\r\n  \"code\": \"MATH10\",\r\n  \"description\": \"Introduction to Mathematics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}enrollments/list/student/3",
+					"host": [
+						"{{localhost}}enrollments"
+					],
+					"path": [
+						"list",
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}enrollments/list/course/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJhYmhheUBnbWFpbC5jb20iLCJpYXQiOjE3NTcxODE4MzIsInVzZXJuYW1lIjoiYWJoYXlAZ21haWwuY29tIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9TdHVkZW50In0seyJhdXRob3JpdHkiOiJST0xFX1RlYWNoZXIifV0sImV4cCI6MTc1NzE4NTQzMn0.O0rx1pIM014-IoYdfQ6EB0WKOv4XALuQfyHC7Hszt03wK27dxz2Xz1_lJP2fVmPD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mathematics\",\r\n  \"code\": \"MATH10\",\r\n  \"description\": \"Introduction to Mathematics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}enrollments/list/course/4",
+					"host": [
+						"{{localhost}}enrollments"
+					],
+					"path": [
+						"list",
+						"course",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
